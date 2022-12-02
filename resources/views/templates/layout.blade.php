@@ -36,7 +36,6 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
     <!-- Google Font -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -292,7 +291,7 @@
     <script src="{{ asset('js/jquery.doubleScroll.js') }}?b=1 "></script>
     <script src="{{ asset('js/SpxApp.js') }}?b=1"></script>
     {{-- <script src="{{ taisan('/public/js/backend.js')}}?b={{config('app.build_version')}}"></script> --}}
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     {{-- @yield('script') --}}
     @isset($include_file)
         @include($include_file)
@@ -347,6 +346,33 @@
     </script>
     <script>
         $(function() {
+
+            // $('#delete').click(function(event) {
+            //     event.preventDefault();
+            //     Swal.fire({
+            //         title: 'Are you sure?',
+            //         text: "You won't be able to revert this!",
+            //         icon: 'warning',
+            //         showCancelButton: true,
+            //         confirmButtonColor: '#3085d6',
+            //         cancelButtonColor: '#d33',
+            //         confirmButtonText: 'Yes, delete it!'
+            //     }).then((result) => {
+            //         if (result.isConfirmed) {
+            //             Swal.fire(
+            //                 'Deleted!',
+            //                 'Your file has been deleted.',
+            //                 'success'
+            //             )
+            //         }
+            //     })
+            // });
+
+        })
+    </script>
+    <script>
+        $(function() {
+
             $('.btnCloseAllNotify').click(function() {
                 if ($('.btnCloseNotification').length > 0) {
                     $('.btnCloseNotification').each(function(item) {

@@ -4,10 +4,10 @@
     <style>
         body {
             /*-webkit-touch-callout: none;
-                                                                                                                            -webkit-user-select: none;
-                                                                                                                            -moz-user-select: none;
-                                                                                                                            -ms-user-select: none;
-                                                                                                                            -o-user-select: none;*/
+                                                                                                                                                            -webkit-user-select: none;
+                                                                                                                                                            -moz-user-select: none;
+                                                                                                                                                            -ms-user-select: none;
+                                                                                                                                                            -o-user-select: none;*/
             user-select: none;
         }
 
@@ -171,7 +171,9 @@
                                         style="white-space:unset;text-align: justify;"> <i class="fa fa-edit"></i>
                                     </a>
                                     <a href="{{ route('task.delete', ['id' => $item->id]) }}"
-                                        class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i>
+                                        class="btn btn-danger shadow btn-xs sharp"
+                                        onclick="return window.confirm('ban co chac chan muon xoa')"><i
+                                            class="fa fa-trash"></i>
                                     </a>
                                 </td>
 
