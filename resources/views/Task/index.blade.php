@@ -4,10 +4,10 @@
     <style>
         body {
             /*-webkit-touch-callout: none;
-                                                                                                        -webkit-user-select: none;
-                                                                                                        -moz-user-select: none;
-                                                                                                        -ms-user-select: none;
-                                                                                                        -o-user-select: none;*/
+                                                                                                                            -webkit-user-select: none;
+                                                                                                                            -moz-user-select: none;
+                                                                                                                            -ms-user-select: none;
+                                                                                                                            -o-user-select: none;*/
             user-select: none;
         }
 
@@ -154,7 +154,7 @@
                             <th class="text-center">Title</th>
                             <th class="text-center">Mô tả</th>
                             <th class="text-center">Thao tác</th>
-
+                            <th>Image</th>
 
                         </tr>
                         @foreach ($res as $item)
@@ -162,7 +162,9 @@
                                 <td class="text-center">{{ $item->id }}</td>
                                 <td class="text-center">{{ $item->title }}</td>
                                 <td class="text-center">{{ $item->description }}</td>
-
+                                <td><img class="img-fluid w-100"
+                                        src="{{ $item->image ? '' . Storage::url($item->image) : 'http://placehold.it/100x100' }}"
+                                        WIDTH="50px" height="50px" alt=""></td>
                                 <td class="text-center">
                                     <a style="color:#333333;font-weight: bold;"
                                         href="{{ route('task.detail', ['id' => $item->id]) }}"

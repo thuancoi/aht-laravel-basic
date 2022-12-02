@@ -11,7 +11,7 @@ class Task extends Model
 {
 
     protected $table = "tasks";
-    protected $fillable = ['id', 'title', 'description'];
+    protected $fillable = ['id', 'title', 'description', 'image'];
     public function loadListWithPager($params = [])
     {
         $query = DB::table($this->table)

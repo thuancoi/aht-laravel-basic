@@ -100,6 +100,13 @@
                                 <span id="mes_sdt"></span>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label for="Image" class="col-md-3 col-sm-4 control-label">Image</label>
+                            <div class="col-md-9 col-sm-8">
+                                <input type="file" class="form-control-file" name="image" id="image"
+                                    aria-describedby="fileHelp">
+                            </div>
+                        </div>
                     </div>
                 </div>
 

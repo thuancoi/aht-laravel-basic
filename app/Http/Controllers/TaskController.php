@@ -35,6 +35,9 @@ class TaskController extends Controller
             $param = [];
             $param['cols'] = $request->post();
             unset($param['cols']['_token']);
+            if ($request->hasFile('image') && $request->file('image')->isValid()) {
+                $param['cols']['image'] = $request->file('image')->store('image');
+            }
             $modelTask = new Task();
             $res = $modelTask->saveNew($param);
 
